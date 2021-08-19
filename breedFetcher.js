@@ -1,9 +1,8 @@
-const args = process.argv;
-const array = args.slice(2, args.length);
 const request = require("request");
 
-// const name = array;
-console.log(array[0]);
+const args = process.argv;
+const array = args.slice(2, args.length);
+
 request(
   `https://api.thecatapi.com/v1/breeds/search?q=${array[0]}`,
   (error, response, body) => {
